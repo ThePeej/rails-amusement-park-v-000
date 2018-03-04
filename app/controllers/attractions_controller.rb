@@ -11,6 +11,7 @@ class AttractionsController < ApplicationController
 
   def new
     if current_user.admin
+      @attraction = Attraction.new
       render '/attractions/new'
     else
       redirect_to attractions_path
