@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   def show
     if logged_in?
       @user = User.find(params[:id])
+      @message = params[:message] if params[:message]
+      @message ||= false
     else
       redirect_to '/'
     end
