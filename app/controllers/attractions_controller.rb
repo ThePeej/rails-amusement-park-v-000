@@ -25,7 +25,7 @@ class AttractionsController < ApplicationController
   def edit
     if current_user.admin
       @attraction = Attraction.find(params[:id])
-      render '/attractions/new'
+      render '/attractions/edit'
     else
       redirect_to attractions_path
     end
