@@ -37,7 +37,7 @@ class AttractionsController < ApplicationController
   end
 
   def update
-
+    @attraction = Attraction.find(params[:id])
   end
 
   private
