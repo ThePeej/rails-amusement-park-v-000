@@ -1,10 +1,8 @@
+require 'pry'
+
 class StaticController < ApplicationController
 
   def index
-  end
-
-  def signup
-    @user = User.new
   end
 
   def signin
@@ -12,7 +10,7 @@ class StaticController < ApplicationController
   end
 
   def login
-    @user = User.find(params[:user][:name])
+    @user = User.find_by(name: params[:user][:name])
     if @user && @user.password == params[:user][:password]
       session[:user_id] = @user.id
       redirect_to user_path(@user)
