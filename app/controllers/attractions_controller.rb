@@ -14,5 +14,6 @@ class AttractionsController < ApplicationController
       render '/attractions/new'
     else
     end
+  end
 
 end
