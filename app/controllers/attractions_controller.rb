@@ -13,5 +13,6 @@ class AttractionsController < ApplicationController
     if current_user.admin
       render '/attractions/new'
     else
+    end
 
 end
