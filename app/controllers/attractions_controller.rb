@@ -23,7 +23,7 @@ class AttractionsController < ApplicationController
   end
 
   def edit
-
+    @attraction = Attraction.new
   end
 
   def update
