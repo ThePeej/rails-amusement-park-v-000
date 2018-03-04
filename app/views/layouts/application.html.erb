@@ -31,6 +31,11 @@
 
     <!-- content -->
     <div class="container"  role="main">
+      <% if @message %>
+        <div class="center alert">
+          <p><%= @message %></p>
+        </div>
+      <% end %>
       <%= yield %>
     </div>
 
