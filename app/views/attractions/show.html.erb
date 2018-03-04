@@ -5,10 +5,10 @@
 <h3>Happiness Rating: <%= @attraction.happiness_rating %></h3>
 
 <% if current_user.admin %>
+  <%= link_to "Edit Attraction", edit_attraction(@attraction) %>
+<% else %>
   <%= form_for Ride.new do |f| %>
     <%= f.hidden_field :attraction_id, :value => @attraction.id %>
     <%= f.submit 'Go on this ride' %>
   <% end %>
-<% else %>
-  <%= link_to "Edit Attraction", edit_attraction(@attraction) %>
 <% end %>
