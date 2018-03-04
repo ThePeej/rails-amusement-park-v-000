@@ -24,6 +24,7 @@ class AttractionsController < ApplicationController
       redirect_to attraction_path(@attraction)
     else
       render 'new'
+    end
   end
 
   def edit
