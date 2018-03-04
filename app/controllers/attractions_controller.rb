@@ -19,7 +19,7 @@ class AttractionsController < ApplicationController
   end
 
   def create
-    raise params.inspect
+    
   end
 
   def edit
@@ -34,5 +34,9 @@ class AttractionsController < ApplicationController
   def update
 
   end
+
+  private
+
+  def attraction_params
 
 end
