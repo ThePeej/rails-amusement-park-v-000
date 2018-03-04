@@ -38,6 +38,11 @@ class AttractionsController < ApplicationController
 
   def update
     @attraction = Attraction.find(params[:id])
+    if @attraction.update(attraction_params)
+      redirect_to attraction_path(@attraction)
+    else
+      render 'edit'
+    end
   end
 
   private
