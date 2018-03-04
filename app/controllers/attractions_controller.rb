@@ -23,7 +23,12 @@ class AttractionsController < ApplicationController
   end
 
   def edit
-    @attraction = Attraction.new
+    if current_user.admin
+      @attraction = Attraction.new
+      render '/attractions/new'
+    else
+      redirect_to attractions_path
+    end
   end
 
   def update
