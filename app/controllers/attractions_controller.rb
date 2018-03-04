@@ -19,7 +19,7 @@ class AttractionsController < ApplicationController
   end
 
   def create
-
+    Attraction.new(attraction_params)
   end
 
   def edit
