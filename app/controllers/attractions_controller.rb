@@ -9,9 +9,7 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.find(params[:id])
   end
 
-  def ride
-    binding.pry
-    Ride.new()
-  end
+  def new
+    if current_user.admin
 
 end
