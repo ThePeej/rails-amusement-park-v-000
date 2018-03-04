@@ -1,9 +1,3 @@
-<% if @message %>
-  <div class="center alert">
-    <p><%= @message %></p>
-  </div>
-<% end %>
-
 <h3><%= "ADMIN" if @user.admin %></h3>
 <h3>Name: <%= @user.name %></h3>
 <h3>Tickets: <%= @user.tickets %></h3>
